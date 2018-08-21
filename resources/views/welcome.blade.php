@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/site.css') }}">
 </head>
 <body class="antialiased">
-    <header class="bg-blue px-4 md:px-12 py-4 min-h-screen-50 bg-image-shopping-bags bg-cover bg-center bg-black-50 bg-multiply">
+    <header class="bg-blue px-4 md:px-12 py-4 bg-image-shopping-bags bg-cover bg-center bg-black-50 bg-multiply">
         <nav class="flex flex-col md:flex-row items-center justify-between">
             <span>
                 <h1 class="text-white font-light mb-4 md:mb-0">Clicks &amp; Mortar</h1>
@@ -18,10 +18,10 @@
             <span>
                 <ul class="list-reset flex">
                     <li>
-                        <a href="" class="text-white uppercase no-underline tracking-wide border-b-2 mr-8">About</a>
+                        <a href="" class="text-white uppercase no-underline tracking-wide border-b-2 mr-8">Blog</a>
                     </li>
                     <li>
-                        <a href="" class="text-white uppercase no-underline tracking-wide mr-8">Our Mission</a>
+                        <a href="" class="text-white uppercase no-underline tracking-wide mr-8">About</a>
                     </li>
                     <li>
                         <a href="" class="text-white uppercase no-underline tracking-wide">Contact</a>
@@ -29,10 +29,10 @@
                 </ul>
             </span>
         </nav>
-        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-white md:w-screen-60 mx-auto mt-12 md:mt-24">Find a store near you offering <br class="hidden lg:inline">click-and-collect.</h1>
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-white md:w-screen-60 mx-auto mt-12 mb-24 md:mt-24 md:mb-32">Find a store near you offering <br class="hidden lg:inline">click-and-collect.</h1>
     </header>
     <main>
-        <section>
+        <section class="mb-8">
             <form class="bg-white rounded md:h-48 md:w-screen-60 mx-4 md:mx-auto -mt-16 md:-mt-24 p-4 sm:p-8 md:py-0 shadow-lg flex flex-col justify-center">
                 <label for="search" class="mb-4 md:mb-6 text-xl md:text-3xl">
                     Search by store name, type or city/town.
