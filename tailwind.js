@@ -167,6 +167,7 @@ module.exports = {
   */
 
   screens: {
+    'xs': '375px',
     'sm': '576px',
     'md': '768px',
     'lg': '992px',
@@ -500,6 +501,7 @@ module.exports = {
     '1/6': '16.66667%',
     '5/6': '83.33333%',
     'full': '100%',
+    'screen-30': '30vw',
     'screen-60': '60vw',
     'screen-70': '70vw',
     'screen': '100vw'
@@ -534,6 +536,7 @@ module.exports = {
     '10': '2.5rem',
     '12': '3rem',
     '16': '4rem',
+    '20': '5rem',
     '24': '6rem',
     '32': '8rem',
     '48': '12rem',
