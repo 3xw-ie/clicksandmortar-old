@@ -372,11 +372,11 @@
                 previousBlogButton.classList.remove('text-indigo-lightest');
                 previousBlogButton.classList.add('text-indigo');
             }
-            if (blogWrapper.scrollLeft === 0 && previousBlogButton.classList.contains('text-indigo')) {
+            if (blogWrapper.scrollLeft <= 0 && previousBlogButton.classList.contains('text-indigo')) {
                 previousBlogButton.classList.remove('text-indigo');
                 previousBlogButton.classList.add('text-indigo-lightest');
             }
-            if (blogWrapper.scrollLeft === blogWrapper.scrollWidth - blogWrapper.clientWidth && nextBlogButton.classList.contains('text-indigo')) {
+            if (blogWrapper.scrollLeft >= blogWrapper.scrollWidth - blogWrapper.clientWidth && nextBlogButton.classList.contains('text-indigo')) {
                 nextBlogButton.classList.remove('text-indigo');
                 nextBlogButton.classList.add('text-indigo-lightest');
             }

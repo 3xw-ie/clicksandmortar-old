@@ -6677,6 +6677,14 @@ body {
   display: none;
 }
 
+.no-scrollbar::-webkit-scrollbar-track {
+  display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 @media (min-width: 375px) {
   .xs\:list-reset {
     list-style: none;
