@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/site.css') }}">
 </head>
 <body class="antialiased">
-    <header class="bg-blue px-4 md:px-12 py-4 bg-image-shopping-bags bg-cover bg-center bg-black-50 bg-multiply">
-        <nav class="flex flex-col md:flex-row items-center justify-between">
+    <header class="bg-blue p-4 bg-image-shopping-bags bg-cover bg-center bg-black-50 bg-multiply">
+        <nav class="flex flex-col md:flex-row md:items-center md:justify-between md:mx-12">
             <span>
                 <h1 class="text-white font-light mb-4 md:mb-0">Clicks &amp; Mortar</h1>
             </span>
