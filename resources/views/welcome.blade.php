@@ -158,14 +158,14 @@
                     <a class="inline-block bg-white text-indigo uppercase tracking-wide p-2 rounded shadow-md">Visit the blog</a>
                 </div>
             </div>
-            <div class="relative py-8 md:-mt-40 lg:-mt-40 md:pl-64 w-screen flex overflow-x-scroll no-scrollbar">
+            <div id="blog-wrapper" class="relative py-8 md:-mt-40 lg:-mt-40 md:pl-64 w-screen flex overflow-x-scroll no-scrollbar" style="-webkit-overflow-scrolling: touch;">
                 <div class="w-80 md:w-96 px-4 md:px-6 flex-no-shrink">
                     <figure class="bg-white rounded shadow-lg">
                         <header>
                             <img src="/img/store-4.jpg" alt="" class="rounded-t">
                         </header>
                         <main class="p-4">
-                            <h1 class="text-2xl font-normal my-2">Walk Shoes</h1>
+                            <h1 class="text-2xl font-normal my-2">From 2000 SKUs to just 1</h1>
                             <p class="uppercase tracking-wide text-xs">4 min read</p>
                             <p class="mt-4 mb-2">
                                 This week we launched Custom Bots, a powerful new way to build completely customizable chatbots that work right…
@@ -180,7 +180,7 @@
                             <img src="/img/store-4.jpg" alt="" class="rounded-t">
                         </header>
                         <main class="p-4">
-                            <h1 class="text-2xl font-normal my-2">Walk Shoes</h1>
+                            <h1 class="text-2xl font-normal my-2">Intro to Omnichanell Retail</h1>
                             <p class="uppercase tracking-wide text-xs">4 min read</p>
                             <p class="mt-4 mb-2">
                                 This week we launched Custom Bots, a powerful new way to build completely customizable chatbots that work right…
@@ -195,7 +195,7 @@
                             <img src="/img/store-4.jpg" alt="" class="rounded-t">
                         </header>
                         <main class="p-4">
-                            <h1 class="text-2xl font-normal my-2">Walk Shoes</h1>
+                            <h1 class="text-2xl font-normal my-2">Launching your store 101</h1>
                             <p class="uppercase tracking-wide text-xs">4 min read</p>
                             <p class="mt-4 mb-2">
                                 This week we launched Custom Bots, a powerful new way to build completely customizable chatbots that work right…
@@ -205,17 +205,17 @@
                     </figure>
                 </div>
                 <div class="w-80 md:w-96 px-4 md:px-6 flex-no-shrink">
-                    <figure class="bg-white rounded shadow-lg">
+                    <figure class="bg-white rounded shadow-lg h-full flex flex-col">
                         <header>
                             <img src="/img/store-4.jpg" alt="" class="rounded-t">
                         </header>
-                        <main class="p-4">
+                        <main class="h-full flex flex-col p-4">
                             <h1 class="text-2xl font-normal my-2">Walk Shoes</h1>
                             <p class="uppercase tracking-wide text-xs">4 min read</p>
                             <p class="mt-4 mb-2">
                                 This week we launched Custom Bots, a powerful new way to build completely customizable chatbots that work right…
                             </p>
-                            <p class="text-sm italic underline p-2 -mx-2 rounded hover:bg-grey-lighter w-auto inline-block">Read more &rarr;</p>
+                            <p class="flex-1 text-sm italic underline p-2 -mx-2 rounded hover:bg-grey-lighter w-auto inline-block">Read more &rarr;</p>
                         </main>
                     </figure>
                 </div>
@@ -251,10 +251,10 @@
                 </div>
             </div>
             <div class="flex justify-center pb-8">
-                <button class="bg-white shadow-md text-indigo-lightest text-2xl rounded-full p-2 h-12">
+                <button id="blog-previous-button" class="bg-white shadow-md text-indigo-lightest text-2xl rounded-full p-2 h-12 focus:outline-none focus:shadow-outline">
                     <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z"/></svg>
                 </button>
-                <button class="bg-white shadow-md text-indigo text-2xl rounded-full p-2 h-12 ml-4">
+                <button id="blog-next-button" class="bg-white shadow-md text-indigo text-2xl rounded-full p-2 h-12 ml-4 focus:outline-none focus:shadow-outline">
                     <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
                 </button>
             </div>
@@ -360,5 +360,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        blogWrapper = document.querySelector('#blog-wrapper');
+
+        nextBlogButton = document.querySelector('#blog-next-button');
+        previousBlogButton = document.querySelector('#blog-previous-button');
+
+        blogWrapper.addEventListener('scroll', function(event) {
+            if (blogWrapper.scrollLeft > 0 && previousBlogButton.classList.contains('text-indigo-lightest')) {
+                previousBlogButton.classList.remove('text-indigo-lightest');
+                previousBlogButton.classList.add('text-indigo');
+            }
+            if (blogWrapper.scrollLeft === 0 && previousBlogButton.classList.contains('text-indigo')) {
+                previousBlogButton.classList.remove('text-indigo');
+                previousBlogButton.classList.add('text-indigo-lightest');
+            }
+            if (blogWrapper.scrollLeft === blogWrapper.scrollWidth - blogWrapper.clientWidth && nextBlogButton.classList.contains('text-indigo')) {
+                nextBlogButton.classList.remove('text-indigo');
+                nextBlogButton.classList.add('text-indigo-lightest');
+            }
+            if (blogWrapper.scrollLeft < blogWrapper.scrollWidth - blogWrapper.clientWidth && nextBlogButton.classList.contains('text-indigo-lightest')) {
+                nextBlogButton.classList.remove('text-indigo-lightest');
+                nextBlogButton.classList.add('text-indigo');
+            }
+        });
+
+        nextBlogButton.onclick = function () {
+            blogWrapper.scrollBy({left: 320, behavior: 'smooth'});
+        }
+
+        previousBlogButton.onclick = function () {
+            blogWrapper.scrollBy({left: -320, behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>

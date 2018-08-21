@@ -6657,6 +6657,10 @@ table {
  * @import "utilities/skew-transforms";
  */
 
+body {
+  scroll-behavior: smooth;
+}
+
 .bg-image-shopping-bags {
   background-image: url("/img/shopping-bags.jpg");
 }
