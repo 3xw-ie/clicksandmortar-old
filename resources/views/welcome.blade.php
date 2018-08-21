@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/site.css') }}">
 </head>
 <body class="antialiased">
-    <header class="bg-blue p-4 bg-image-shopping-bags bg-cover bg-center bg-black-50 bg-multiply">
+    <header class="bg-blue p-4 bg-cover bg-center bg-black-50 bg-multiply" style="background-image: url('/img/shopping-bags.jpg');">
         <nav class="flex flex-col md:flex-row md:items-center md:justify-between md:mx-12">
             <span>
                 <h1 class="text-white font-light mb-4 md:mb-0">Clicks &amp; Mortar</h1>
@@ -37,7 +37,7 @@
                 <label for="search" class="mb-4 md:mb-6 text-xl md:text-3xl">
                     Search by store name, type or city/town.
                 </label>
-                <div class="flex">
+                <div class="flex shadow-md">
                     <input type="text" name="search" class="min-w-0 bg-grey-light rounded-l flex-grow p-2 md:p-3 lg:p-4">
                     <button type="button" class="inline-block bg-indigo text-white uppercase p-2 md:p-3 lg:p-4 rounded-r">Search</button>
                 </div>
