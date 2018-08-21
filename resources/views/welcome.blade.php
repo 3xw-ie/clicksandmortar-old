@@ -13,7 +13,7 @@
     <header class="bg-blue px-4 md:px-12 py-4 min-h-screen-50 bg-image-shopping-bags bg-cover bg-center bg-black-50 bg-multiply">
         <nav class="flex flex-col md:flex-row items-center justify-between">
             <span>
-                <h1 class="text-white font-light mb-4">Clicks &amp; Mortar</h1>
+                <h1 class="text-white font-light mb-4 md:mb-0">Clicks &amp; Mortar</h1>
             </span>
             <span>
                 <ul class="list-reset flex">
